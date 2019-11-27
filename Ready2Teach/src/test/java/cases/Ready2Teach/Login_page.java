@@ -123,13 +123,13 @@ public class Login_page extends base{
 		AssertJUnit.assertEquals(Pwderr, "Please enter a password");
 	}
 	
-	@Test
-	public void EmailloginErr()
+	@Test(dataProvider = "getEmailError")
+	public void EmailloginErr(String name)
 	{
 		driver.get(prop.getProperty("url"));
 		LoginPage_Attr logAtt = new LoginPage_Attr(driver);
 		logAtt.getEmail().clear();
-		logAtt.getEmail().sendKeys("Rachna");
+		logAtt.getEmail().sendKeys(name);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		WebElement Loginbtn = logAtt.getLoginbtn();
 		js.executeScript("arguments[0].click();", Loginbtn);
@@ -184,4 +184,11 @@ public class Login_page extends base{
 		return data;
 	}
 	
+	@DataProvider
+	public Object[][] getEmailError()
+	{
+		Object[][] data = new Object[1][1];
+		data[0][0] = "Rachna";
+		return data;
+	}
 }

@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Login_Page">   
-    <classes>      
-      <class name="cases.Ready2Teach.Login_page"/>
-    </classes>
-  </test>
-  <test name="School_Register">
-    <classes>
-      <class name="cases.Ready2Teach.School_Register"/>
-    </classes>
-  </test>
-  <test name="SubsRegis">
-    <classes>    
-      <class name="cases.Ready2Teach.SubsRegis"/>
-    </classes>     
-  </test>
-  <test name="ForgetPassword">
-    <classes>
-      <class name="cases.Ready2Teach.ForgetPassword"/>
-    </classes>  
-  </test> <!-- Test -->
+
+	<listeners>
+
+
+		<listener class-name="cases.Ready2Teach.listeners" />
+
+	</listeners>
+
+	<test name="Login_Page">
+		<classes>
+			<class name="cases.Ready2Teach.Login_page" />
+		</classes>
+	</test>
+	<test name="School_Register">
+		<classes>
+			<class name="cases.Ready2Teach.School_Register" />
+		</classes>
+	</test>
+	<test name="SubsRegis">
+		<classes>
+			<class name="cases.Ready2Teach.SubsRegis" />
+		</classes>
+	</test>
+	<test name="ForgetPassword">
+		<classes>
+			<class name="cases.Ready2Teach.ForgetPassword" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

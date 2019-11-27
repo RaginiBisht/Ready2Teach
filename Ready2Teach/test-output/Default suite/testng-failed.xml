@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cases.Ready2Teach.School_Register">
+      <class name="cases.Ready2Teach.Login_page">
         <methods>
-          <include name="closedriver"/>
           <include name="basePageNavigation"/>
-          <include name="validemailErr"/>
+          <include name="testRembrMe" invocation-numbers="0"/>
+          <include name="closedriver"/>
         </methods>
-      </class> <!-- cases.Ready2Teach.School_Register -->
+      </class> <!-- cases.Ready2Teach.Login_page -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
